@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontakt</title>
+    <script src="script.js"></script>
+    <link rel="icon" type="image/x-icon" href="./img/logo_small.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body onload="includeHTML()">
+    <header w3-include-html="./templates/header.html"></header>
+    <main class='contact-main'>
+      <form
+        action="http://gruppe-594.developerakademie.net/jan/kochwelt/send_mail/send_mail.php"
+        method="POST"
+      >
+        <input
+          required
+          id="name"
+          type="text"
+          class="name"
+          name="name"
+          placeholder="Dein Name..."
+        />
+        <textarea
+          required
+          placeholder="Deine Nachricht an uns..."
+          name="message"
+          id="message"
+          cols="30"
+          rows="10"
+        ></textarea>
+        <button class="button-link" type="submit">Nachricht abschicken</button>
+      </form>
+    </main>
+    <footer w3-include-html="./templates/footer.html"></footer>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezept des Tages</title>
+    <link rel="stylesheet" href="https://use.typekit.net/ehi0drf.css" type="text/css">
+    <link rel="stylesheet" href="./../CSS/fonds.css" type="text/css">
+    <link href="./../CSS/index.css" rel="stylesheet" type="text/css">
+    <link href="./../CSS/rezept_des_tages.css" rel="stylesheet" type="text/css">
+    <script language="javascript" type="text/javascript" src="./../Templates/script.js"></script>
+    <script language="javascript" type="text/javascript" src="./../JS/rezept_des_tages.js"></script>
+</head>
+
+<body onload="includeHTML()" id="start">
+
+
+        <header>
+            <div w3-include-html="./../Templates/header.html"></div>
+        </header>
+
+
+        <h1>Paprika-Speisequark-Burger</h1>
+
+        <img src="./../img/rezept_des_tages.JPG" alt="Mond Semmeln" class="banner">
+
+        <div class="koch_angaben">
+
+            <div class="info_1">
+                <img src="./../img/icons/clock-regular.svg">
+                <p>15 Min</p>
+            </div>
+
+            <div class="info_2">
+                <img src="./../img/icons/brain-solid.svg">
+                <p>simpel</p>
+            </div>
+
+            <div class="info_3">
+                <img src="./../img/icons/calendar-alt-regular.svg">
+                <p>28.09.2020</p>
+            </div>
+
+        </div>
+
+
+        
+
+        <div class="calculator">
+            <p>Zutaten für</p>
+            <input type="number" id="portion-input" min="1" max="10" value="1">
+            <button onclick="calculateIngredients()">Portionen</button>
+        </div>
+
+        <div id="ingredient-table" class="ingredient">
+            <div class="ingredient_1">
+                <p>50 g</p>
+                <p>Mohnsemmeln</p>
+            </div>  
+
+            <div class="ingredient_2">
+                <p>80 g</p>
+                <p>Parikaschote(n), rot und grün</p>
+            </div>
+
+            <div class="ingredient_1">
+                <p>5 g</p>
+                <p>Butter</p>
+            </div>
+
+            <div class="ingredient_2">
+                <p>10 g</p>
+                <p>Speisequark (ca. 10% Fett)</p>
+            </div>
+
+        </div>
+
+        <h2>Zubereitung</h2>
+
+        <div class="abstract">
+
+            <div class="abstract_1">
+                <img src="./../img/icons/clock-regular.svg" alt="clock-svg">
+                <p>ca. 2 Minuten</p>
+            </div>
+
+            <div class="abstract_2">
+                <img src="./../img/icons/clock-regular.svg" alt="clock-svg">
+                <p>Gesamntzeit ca. 2 Minuten</p>
+            </div>
+
+        </div>
+
+
+        <p class="text">Das Brötchen durchschneiden und beide Hälften mit Quark bestreichen.<br>
+            Die Paprika waschenn putzen und in Streifen schneiden. Zusammen mit der Wurst auf ein Brötschnhäfte legen und zudecken.</p>
+
+        <h3>Rezept erstellt von</h3>
+
+        <div class="nutzer">
+
+            <img src="./../img/profiel_bild.jpeg">    
+            <p>Steffen</p>
+
+        </div>
+
+
+        <footer>
+            <div w3-include-html="./../Templates/footer.html"></div>
+       </footer>
+    
+    
+    
+</body>
+</html>

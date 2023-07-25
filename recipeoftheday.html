@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rezept des Tages</title>
+    <script src="script.js"></script>
+    <link rel="icon" type="image/x-icon" href="./img/logo_small.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body onload="includeHTML(); populateRecipeTemplate(recipeIndex)">
+    <header w3-include-html="./templates/header.html"></header>
+    <main>
+      <article id="greek-salad" class="recipe-article">
+        <h1 id="recipe-title"></h1>
+        <img
+          id="recipe-pic"
+          alt="Griechischer Bauernsalat"
+          class="recipe-img"
+        />
+        <div class="recipe-tags recipe-tags-top">
+          <span class="recipe-tag"
+            ><img
+              src="./img/icons/clock-regular.svg"
+              alt="Uhrsymbol"
+              class="icon-small"
+            />
+            <span id="time-tag"></span> </span
+          ><span class="recipe-tag"
+            ><img
+              src="./img/icons/brain-solid.svg"
+              alt="Gehirnsymbol"
+              class="icon-small"
+            />
+            <span id="difficulty-tag"></span> </span
+          ><span class="recipe-tag"
+            ><img
+              src="./img/icons/calendar-alt-regular.svg"
+              alt="Kalendersymbol"
+              class="icon-small" />
+            <span id="date-tag"></span
+          ></span>
+        </div>
+        <div class="quantity-selector">
+          <span>Zutaten für </span>
+          <input
+            class="input-number"
+            type="number"
+            id="recipe-quantity"
+            min="1"
+            value="1"
+            required
+          />
+          <a
+            class="button-link"
+            href="#recipe-quantity"
+            onclick="calculateIngredients(recipeIndex)"
+            >Portionen</a
+          >
+        </div>
+        <table>
+          <tbody class="ingredients" id="ingredients"></tbody>
+        </table>
+        <h2>Zubereitung</h2>
+        <div class="recipe-tags recipe-tags-bottom">
+          <span class="recipe-tag"
+            ><img
+              src="./img/icons/clock-regular.svg"
+              alt="Uhrsymbol"
+              class="icon-small" />
+            <span id="preparation-duration"></span
+          ></span>
+          <span class="recipe-tag"
+            ><img
+              src="./img/icons/clock-regular.svg"
+              alt="Uhrsymbol"
+              class="icon-small" />
+            <span id="total-duration"></span
+          ></span>
+        </div>
+        <p id="preparation-instructions"></p>
+        <h3>Rezept erstellt von</h3>
+        <div class="author-container">
+          <img id="author-pic" class="profile-img" alt="Profilbild" />
+          <span id="author-name"></span>
+        </div>
+      </article>
+    </main>
+    <footer w3-include-html="./templates/footer.html"></footer>
+  </body>
+</html>
